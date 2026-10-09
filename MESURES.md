@@ -245,11 +245,3 @@ Espace occupé dans le registre après publication : 149 076 119 octets (149,1 M
 
 **Suite, 09/10/2026 à 16:44.** La phrase corrigée ci-dessus reste exacte tant que le registre existe, mais le registre a été supprimé (voir mesure 17) pour ne rien consommer pendant la pause. Elle est donc à lire ainsi jusqu'à la reprise : le registre n'existe plus ; il est à recréer (groupe `rg-dermascan-registre-tp42`, étiquette `a_detruire` à reposer, registre `acrdermascantp42` en SKU Basic) et à republier (`dermascan-api:1.0.0`, nouveau digest) avant la séance 3, puis à détruire à la fin du projet fil rouge. Ce qui m'a fait changer d'avis sur la durée de vie du registre : un registre facturé à la réservation coûte pendant les périodes sans séance, et l'image se reconstruit en quelques minutes à partir de `s2-dermascan/`.
 
-### Contrôle d'extinction
-
-| Contrôle d'extinction | Fait |
-|---|---|
-| `az group list` ne montre toujours qu'un groupe, celui du registre | Non, volontairement : à 12:50 il montrait le seul groupe du registre ; à 16:44 il est **vide**, le registre ayant été supprimé (pause de deux semaines). Aucun groupe ajouté à mon insu (`az resource list` vide) |
-| Aucun conteneur de la séance dans `docker ps -a` | Oui (relevés de 12:50 et de 16:42 : liste vide) |
-| Docker Desktop quitté | Oui (déclaré par Théo le 09/10/2026 à 16:47, après `99_extinction.ps1`) |
-| Machine éteinte | _à confirmer_ |
